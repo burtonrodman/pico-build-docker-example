@@ -6,7 +6,21 @@
         {
             "label": "make",
             "type": "shell",
-            "command": "docker run -it -v ${pwd}:/src -w /src --rm burtonrodman/pico-sdk bash ./make.sh",
+            "command": "docker",
+            "args": [
+                "run",
+                "-it",
+                "-v",
+                "${pwd}:/src",
+                "-w",
+                "/src",
+                "--env",
+                "PICO_SDK_PATH=/pico/pico-sdk",
+                "--rm",
+                "burtonrodman/pico-sdk",
+                "bash",
+                "./make.sh"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
