@@ -10,6 +10,13 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
+            },
+            "windows": {
+                "options": {
+                    "shell": {
+                        "executable": "c:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe"
+                    }
+                }
             }
         }
     ]
