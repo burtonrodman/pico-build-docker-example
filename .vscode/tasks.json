@@ -4,6 +4,32 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "configure",
+            "type": "shell",
+            "command": "docker",
+            "args": [
+                "run",
+                "-it",
+                "-v",
+                "${pwd}:/src",
+                "-w",
+                "/src",
+                "--env",
+                "PICO_SDK_PATH=/pico/pico-sdk",
+                "--rm",
+                "burtonrodman/pico-sdk",
+                "bash",
+                "./configure.sh"
+            ],
+            "windows": {
+                "options": {
+                    "shell": {
+                        "executable": "c:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe"
+                    }
+                }
+            }
+        },
+        {
             "label": "make",
             "type": "shell",
             "command": "docker",

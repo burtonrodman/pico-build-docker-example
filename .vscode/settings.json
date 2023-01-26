@@ -1,9 +1,0 @@
-// Place your settings in this file to overwrite the default settings
-{
-    "terminal.integrated.profiles.windows": {
-        "PowerShell": {
-            "source": "PowerShell",
-            "icon": "terminal-powershell"
-        },
-    }
-}
