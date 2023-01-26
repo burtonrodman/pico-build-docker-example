@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 
 # CHECK THESE PROPERTIES
-set(PICO_BOARD pico_w)
+set(PICO_BOARD pico_w CACHE STRING "Board type")
 set(target_project docker_example)
 
 
